@@ -7,9 +7,10 @@
     <Version>1.0.0</Version>
     <Description>Client REST Api helper to consume REST APIs</Description>
     <Company />
-    <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/CharbelElia/Client-Rest-API-Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/CharbelElia/Client-Rest-API-Core.git</RepositoryUrl>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
