@@ -1,0 +1,347 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClientWebAPICore</name>
+    </assembly>
+    <members>
+        <member name="T:ClientWebAPICore.ClientRestApi">
+            <summary>
+            This class is responsible of sending requests to a Rest API
+            </summary>
+        </member>
+        <member name="M:ClientWebAPICore.ClientRestApi.Post``2(System.String,``0,ClientWebAPICore.RequestSerializer.IRequestSerializer,ClientWebAPICore.ResponseParser.IResponseParser{``1},System.Boolean,System.Collections.Generic.IDictionary{System.String,System.String},System.Boolean)">
+            <summary>
+            Send a POST request to the specified Url
+            </summary>
+            <typeparam name="DataType">The type of the data to be serialized before sending the request</typeparam>
+            <typeparam name="ResponseDataType">The type of the Data in the Response object</typeparam>
+            <param name="url">The Url the request is sent to</param>
+            <param name="data">The data to be sent in the request content</param>
+            <param name="requestSerializer">The request serializer to serialize the data before setting the request content</param>
+            <param name="responseParser">The parser of the http response</param>
+            <param name="compressData"></param>
+            <param name="header">The http headers</param>
+            <param name="useStringContentWithoutCharset">The boolean value indicating whether to remove or not the 'charset' from the content type, in order to deal with a server bad implementation</param>
+            <returns>Response of the given type parameter 'ResponseDataType'</returns>
+        </member>
+        <member name="M:ClientWebAPICore.ClientRestApi.PostAsync``2(System.String,``0,ClientWebAPICore.RequestSerializer.IRequestSerializer,ClientWebAPICore.ResponseParser.IResponseParser{``1},System.Boolean,System.Collections.Generic.IDictionary{System.String,System.String},System.Boolean)">
+            <summary>
+            Send a POST request to the specified Url as an asynchronous operation
+            </summary>
+            <typeparam name="DataType">The type of the data to be serialized before sending the request</typeparam>
+            <typeparam name="ResponseDataType">The type of the Data in the Response object</typeparam>
+            <param name="url">The Url the request is sent to</param>
+            <param name="data">The data to be sent in the request content</param>
+            <param name="requestSerializer">The request serializer to serialize the data before setting the request content</param>
+            <param name="responseParser">The parser of the http response</param>
+            <param name="compressData"></param>
+            <param name="header">The http headers</param>
+            <param name="useStringContentWithoutCharset">The boolean value indicating whether to remove or not the 'charset' from the content type, in order to deal with a server bad implementation</param>
+            <returns>Task of Response of the given type parameter 'ResponseDataType'</returns>
+        </member>
+        <member name="M:ClientWebAPICore.ClientRestApi.Post``1(System.String,ClientWebAPICore.ResponseParser.IResponseParser{``0},System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Send a POST request to the specified Url without body content
+            </summary>
+            <typeparam name="ResponseDataType">The type of the Data in the Response object</typeparam>
+            <param name="url">The Url the request is sent to</param>
+            <param name="responseParser">The parser of the http response</param>
+            <param name="header">The http headers</param>
+            <returns>Response of the given type parameter 'ResponseDataType'</returns>
+        </member>
+        <member name="M:ClientWebAPICore.ClientRestApi.PostAsync``1(System.String,ClientWebAPICore.ResponseParser.IResponseParser{``0},System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Send a POST request to the specified Url as an asynchronous operation without body content
+            </summary>
+            <typeparam name="ResponseDataType">The type of the Data in the Response object</typeparam>
+            <param name="url">The Url the request is sent to</param>
+            <param name="responseParser">The parser of the http response</param>
+            <param name="header">The http headers</param>
+            <returns>Task of Response of the given type parameter 'ResponseDataType'</returns>
+        </member>
+        <member name="M:ClientWebAPICore.ClientRestApi.Delete``1(System.String,ClientWebAPICore.ResponseParser.IResponseParser{``0},System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Send a DELETE request to the specified Url
+            </summary>
+            <typeparam name="ResponseDataType">The type of the Data in the Response object</typeparam>
+            <param name="url">The Url the request is sent to</param>
+            <param name="responseParser">The parser of the http response</param>
+            <param name="header">The http headers</param>
+            <returns>Response of the given type parameter 'ResponseDataType'</returns>
+        </member>
+        <member name="M:ClientWebAPICore.ClientRestApi.DeleteAsync``1(System.String,ClientWebAPICore.ResponseParser.IResponseParser{``0},System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Send a DELETE request to the specified Url as an asynchronous operation
+            </summary>
+            <typeparam name="ResponseDataType">The type of the Data in the Response object</typeparam>
+            <param name="url">The Url the request is sent to</param>
+            <param name="responseParser">The parser of the http response</param>
+            <param name="header">The http headers</param>
+            <returns>Task of Response of the given type parameter 'ResponseDataType'</returns>
+        </member>
+        <member name="M:ClientWebAPICore.ClientRestApi.Get``1(System.String,ClientWebAPICore.ResponseParser.IResponseParser{``0},System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Send a GET request to the specified Url
+            </summary>
+            <typeparam name="ResponseDataType">The type of the Data in the Response object</typeparam>
+            <param name="url">The Url the request is sent to</param>
+            <param name="responseParser">The parser of the http response</param>
+            <param name="header">The http headers</param>
+            <returns>Response of the given type parameter 'ResponseDataType'</returns>
+        </member>
+        <member name="M:ClientWebAPICore.ClientRestApi.GetAsync``1(System.String,ClientWebAPICore.ResponseParser.IResponseParser{``0},System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Send a GET request to the specified Url as an asynchronous operation
+            </summary>
+            <typeparam name="ResponseDataType">The type of the Data in the Response object</typeparam>
+            <param name="url">The Url the request is sent to</param>
+            <param name="responseParser">The parser of the http response</param>
+            <param name="header">The http headers</param>
+            <returns>Task of Response of the given type parameter 'ResponseDataType'</returns>
+        </member>
+        <member name="M:ClientWebAPICore.ClientRestApi.Put``2(System.String,``0,ClientWebAPICore.RequestSerializer.IRequestSerializer,ClientWebAPICore.ResponseParser.IResponseParser{``1},System.Collections.Generic.IDictionary{System.String,System.String},System.Boolean)">
+            <summary>
+            Send a PUT request to the specified Url
+            </summary>
+            <typeparam name="DataType">The type of the data to be serialized before sending the request</typeparam>
+            <typeparam name="ResponseDataType">The type of the Data in the Response object</typeparam>
+            <param name="url">The Url the request is sent to</param>
+            <param name="data">The data to be sent in the request content</param>
+            <param name="requestSerializer">The request serializer to serialize the data before setting the request content</param>
+            <param name="responseParser">The parser of the http response</param>
+            <param name="header">The http headers</param>
+            <param name="useStringContentWithoutCharset">The boolean value indicating whether to remove or not the 'charset' from the content type, in order to deal with a server bad implementation</param>
+            <returns>Response of the given type parameter 'ResponseDataType'</returns>
+        </member>
+        <member name="M:ClientWebAPICore.ClientRestApi.PutAsync``2(System.String,``0,ClientWebAPICore.RequestSerializer.IRequestSerializer,ClientWebAPICore.ResponseParser.IResponseParser{``1},System.Collections.Generic.IDictionary{System.String,System.String},System.Boolean)">
+            <summary>
+            Send a PUT request to the specified Url as an asynchronous operation
+            </summary>
+            <typeparam name="DataType">The type of the data to be serialized before sending the request</typeparam>
+            <typeparam name="ResponseDataType">The type of the Data in the Response object</typeparam>
+            <param name="url">The Url the request is sent to</param>
+            <param name="data">The data to be sent in the request content</param>
+            <param name="requestSerializer">The request serializer to serialize the data before setting the request content</param>
+            <param name="responseParser">The parser of the http response</param>
+            <param name="header">The http headers</param>
+            <param name="useStringContentWithoutCharset">The boolean value indicating whether to remove or not the 'charset' from the content type, in order to deal with a server bad implementation</param>
+            <returns>Task of Response of the given type parameter 'ResponseDataType'</returns>
+        </member>
+        <member name="T:ClientWebAPICore.Error">
+            <summary>
+            The model representing an error
+            </summary>
+        </member>
+        <member name="P:ClientWebAPICore.Error.ErrorCode">
+            <summary>
+            The error code
+            </summary>
+        </member>
+        <member name="P:ClientWebAPICore.Error.ErrorDescription">
+            <summary>
+            The error description
+            </summary>
+        </member>
+        <member name="T:ClientWebAPICore.Helper">
+            <summary>
+            This class provides usefull methods
+            </summary>
+        </member>
+        <member name="M:ClientWebAPICore.Helper.SerializeToStringXml``1(``0,System.Boolean,System.Xml.Serialization.XmlSerializerNamespaces)">
+            <summary>
+            This static method is used to serialize a data of type T to Xml string
+            </summary>
+            <typeparam name="T">The data type of the data to be serialized</typeparam>
+            <param name="value">The data to be serialized</param>
+            <param name="omitXmlDeclaration">A boolean value indicating whether to ommit or not the xml declaration</param>
+            <param name="xmlSerializerNamespaces">Xml namespaces to be mentioned in the serialized Xml string</param>
+            <returns>Xml string</returns>
+        </member>
+        <member name="M:ClientWebAPICore.Helper.DeserializeXml``1(System.String)">
+            <summary>
+            This static method is used to deserialize an Xml string to an object of type T
+            </summary>
+            <typeparam name="T">The expected data type of the deserialized object</typeparam>
+            <param name="xmlStr">The xml string to be deserialized</param>
+            <returns>The deserialized object of type T</returns>
+        </member>
+        <member name="T:ClientWebAPICore.RequestSerializer.IRequestSerializer">
+            <summary>
+            Serializes data to string and returns the corresponding media type.
+            </summary>
+        </member>
+        <member name="M:ClientWebAPICore.RequestSerializer.IRequestSerializer.Serialize``1(``0)">
+            <summary>
+            Serializes the data to string
+            </summary>
+            <typeparam name="DataType">The type of the data to be serialized</typeparam>
+            <param name="data">The data to be serialized</param>
+            <returns>The serialized data as string</returns>
+        </member>
+        <member name="M:ClientWebAPICore.RequestSerializer.IRequestSerializer.GetMediaType">
+            <summary>
+            Returns the media type
+            </summary>
+            <returns>the media type of the http request content as string</returns>
+        </member>
+        <member name="T:ClientWebAPICore.RequestSerializer.JsonRequestSerializer">
+            <summary>
+            Serializes the data to Json using Newtonsoft
+            </summary>
+        </member>
+        <member name="M:ClientWebAPICore.RequestSerializer.JsonRequestSerializer.GetMediaType">
+            <summary>
+            Returns the media type
+            </summary>
+            <returns>the media type 'application/json' as string</returns>
+        </member>
+        <member name="M:ClientWebAPICore.RequestSerializer.JsonRequestSerializer.Serialize``1(``0)">
+            <summary>
+            Serializes the data to Json
+            </summary>
+            <typeparam name="DataType">The type of the data to be serialized to Json</typeparam>
+            <param name="data">The data to be serialized to Json</param>
+            <returns>The serialized data as string</returns>
+        </member>
+        <member name="T:ClientWebAPICore.RequestSerializer.KeyValuePairRequestSerializer">
+            <summary>
+            This class is responsible of serializing the request’s content to a string of key value pairs seperated by semicolon.
+            </summary>
+        </member>
+        <member name="M:ClientWebAPICore.RequestSerializer.KeyValuePairRequestSerializer.Serialize``1(``0)">
+            <summary>
+            Serializes the data to a string of key value pairs seperated by semicolon
+            </summary>
+            <typeparam name="DataType">The type of the data to be serialized to string of key value pairs seperated by semicolon</typeparam>
+            <param name="data">The data to be serialized to string of key value pairs seperated by semicolon</param>
+            <returns>The serialized data as string</returns>
+        </member>
+        <member name="M:ClientWebAPICore.RequestSerializer.KeyValuePairRequestSerializer.GetMediaType">
+            <summary>
+            Returns the media type
+            </summary>
+            <returns>the media type 'application/x-www-form-urlencoded' as string</returns>
+        </member>
+        <member name="T:ClientWebAPICore.RequestSerializer.Serializable">
+            <summary>
+            This attribute is allowed on properties only.
+            When you decorate a property with this attribute, it means that this property will be serialized by the KeyValuePairSerializer.
+            In case no properties are decorated by this attribute, then all the properties are considered serializable except those decorated by SerializerIgnore attribute.
+            If at least one property has the Serializable attribute then only properties with this attribute are considered serializable.
+            This is just intended to make it easier in case only few properties among many are requested to be serialized.
+            In this case instead of adding SerializerIgnore attribute to many properties, Serializable attribute can be added to few of them.
+            </summary>
+        </member>
+        <member name="T:ClientWebAPICore.RequestSerializer.SerializerIgnore">
+            <summary>
+            This attribute is allowed on properties only.
+            When you decorate a property with this attribute, it means that this property will be ignored by the KeyValuePairSerializer.
+            </summary>
+        </member>
+        <member name="T:ClientWebAPICore.RequestSerializer.SerializerName">
+            <summary>
+            This attribute is allowed on properties only.
+            When you decorate a property with this attribute, you can give the property the name to be considered by the KeyValuePairSerializer.
+            </summary>
+        </member>
+        <member name="T:ClientWebAPICore.RequestSerializer.XmlRequestSerializer">
+            <summary>
+            Serializes the data to Xml using XmlSerializer
+            </summary>
+        </member>
+        <member name="M:ClientWebAPICore.RequestSerializer.XmlRequestSerializer.#ctor(System.Boolean,System.Xml.Serialization.XmlSerializerNamespaces)">
+            <summary>
+            The construtor of the class
+            </summary>
+            <param name="omitXmlDeclaration">The boolean value indicating whether to ommit or not the xml decralation when serilizing the data</param>
+            <param name="xmlSerializerNamespaces">The xml namespaces to be mentioned when serializing the data</param>
+        </member>
+        <member name="M:ClientWebAPICore.RequestSerializer.XmlRequestSerializer.GetMediaType">
+            <summary>
+            Returns the media type
+            </summary>
+            <returns>the media type 'application/xml' as string</returns>
+        </member>
+        <member name="M:ClientWebAPICore.RequestSerializer.XmlRequestSerializer.Serialize``1(``0)">
+            <summary>
+            Serializes the data to Xml
+            </summary>
+            <typeparam name="DataType">The type of the data to be serialized to Xml</typeparam>
+            <param name="data">The data to be serialized to Xml</param>
+            <returns>The serialized data as string</returns>
+        </member>
+        <member name="T:ClientWebAPICore.Response`1">
+            <summary>
+            This is a template class to represent the response of an http call. 
+            It contains data of type T (the type parameter of the class), an error object of type Error, and a boolean value indicating whether the request was successful or not
+            </summary>
+            <typeparam name="T">The type of the Data property</typeparam>
+        </member>
+        <member name="P:ClientWebAPICore.Response`1.Data">
+            <summary>
+            The data as an object of type T
+            </summary>
+        </member>
+        <member name="P:ClientWebAPICore.Response`1.Error">
+            <summary>
+            The error as an object of type Error
+            </summary>
+        </member>
+        <member name="P:ClientWebAPICore.Response`1.Success">
+            <summary>
+            A boolean value indicating whether the request was successful or not
+            </summary>
+        </member>
+        <member name="T:ClientWebAPICore.ResponseParser.IResponseParser`1">
+            <summary>
+            Parses the HttpResponseMessage and returns an object of type Response of T
+            </summary>
+        </member>
+        <member name="M:ClientWebAPICore.ResponseParser.IResponseParser`1.ParseResponse(System.Net.Http.HttpResponseMessage)">
+            <summary>
+            Parses the HttpResponseMessage and returns an object of type Response of T
+            </summary>
+            <param name="apiResponse">The HttpResponseMessage object</param>
+            <returns>The response as an object of type Response of T </returns>
+        </member>
+        <member name="T:ClientWebAPICore.ResponseParser.JsonResponseParser`1">
+            <summary>
+            Read the Http response content as Json and parses it to Response of T
+            </summary>
+            <typeparam name="T">The expected data type</typeparam>
+        </member>
+        <member name="M:ClientWebAPICore.ResponseParser.JsonResponseParser`1.ParseResponse(System.Net.Http.HttpResponseMessage)">
+            <summary>
+            Read the Http response content as Json and parses it to Response of T
+            </summary>
+            <param name="apiResponse">The HttpResponseMessage object</param>
+            <returns>The response as an object of type Response of T </returns>
+        </member>
+        <member name="T:ClientWebAPICore.ResponseParser.SuccessResponseParser">
+            <summary>
+            Read the Http status code and returns an object of type Response of string
+            </summary>
+            <typeparam name="T">The expected data type</typeparam>
+        </member>
+        <member name="M:ClientWebAPICore.ResponseParser.SuccessResponseParser.ParseResponse(System.Net.Http.HttpResponseMessage)">
+            <summary>
+            Read the Http status code and returns an object of type Response of string
+            </summary>
+            <param name="apiResponse">The HttpResponseMessage object</param>
+            <returns>The response as an object of type Response of string </returns>
+        </member>
+        <member name="T:ClientWebAPICore.ResponseParser.XmlResponseParser`1">
+            <summary>
+            Read the Http response content as Xml and parses it to Response of T
+            </summary>
+            <typeparam name="T">The expected data type</typeparam>
+        </member>
+        <member name="M:ClientWebAPICore.ResponseParser.XmlResponseParser`1.ParseResponse(System.Net.Http.HttpResponseMessage)">
+            <summary>
+            Read the Http response content as Xml and parses it to Response of T
+            </summary>
+            <param name="apiResponse">The HttpResponseMessage object</param>
+            <returns>The response as an object of type Response of T </returns>
+        </member>
+    </members>
+</doc>

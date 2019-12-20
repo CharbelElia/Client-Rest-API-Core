@@ -4,13 +4,17 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <Authors>Charbel Elia</Authors>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Description>Client REST Api helper to consume REST APIs</Description>
     <Company />
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/CharbelElia/Client-Rest-API-Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/CharbelElia/Client-Rest-API-Core.git</RepositoryUrl>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\My REST API Core\Server_and_client_web_API_core\ClientWebAPICore\ClientWebAPICore\Code\ClientWebAPICore\ClientWebAPICore.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
