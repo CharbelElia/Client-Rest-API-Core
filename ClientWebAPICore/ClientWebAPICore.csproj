@@ -8,6 +8,8 @@
     <Description>Client REST Api helper to consume REST APIs</Description>
     <Company />
     <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/CharbelElia/Client-Rest-API-Core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/CharbelElia/Client-Rest-API-Core.git</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
