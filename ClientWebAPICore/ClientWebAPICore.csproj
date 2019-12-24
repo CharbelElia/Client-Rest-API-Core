@@ -4,7 +4,7 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <Authors>Charbel Elia</Authors>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Description>Client REST Api helper to consume REST APIs</Description>
     <Company />
     <PackageLicenseUrl></PackageLicenseUrl>

@@ -43,12 +43,14 @@ namespace ClientWebAPICore.RequestSerializer
                     IList values = property.GetValue(data) as IList;
                     foreach (object value in values)
                     {
-                        serializedData.AppendUrlEncoded((string.IsNullOrWhiteSpace(propertySerializerName))?property.Name : propertySerializerName, value.ToString());
+                        if (value != null)
+                            serializedData.AppendUrlEncoded((string.IsNullOrWhiteSpace(propertySerializerName)) ? property.Name : propertySerializerName, value.ToString());
                     }
                 }
                 else
                 {
-                    serializedData.AppendUrlEncoded((string.IsNullOrWhiteSpace(propertySerializerName)) ? property.Name : propertySerializerName, property.GetValue(data).ToString());
+                    if (property.GetValue(data) != null)
+                        serializedData.AppendUrlEncoded((string.IsNullOrWhiteSpace(propertySerializerName)) ? property.Name : propertySerializerName, property.GetValue(data).ToString());
                 }
             }
             return serializedData.ToString();
